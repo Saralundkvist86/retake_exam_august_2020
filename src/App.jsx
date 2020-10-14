@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { fetchSeries } from "./modules/fetchSeries";
+import ViaplayHeader from "./ViaplayHeader";
+import ViaplayFooter from "./ViaplayFooter";
 
 class App extends Component {
   state = {
@@ -15,14 +17,23 @@ class App extends Component {
     let seriesList = this.state.series.map((serie) => {
       return (
         <>
-          <img
+        <div id="image">
+          <img 
             src={`${serie.content.images.landscape.url}`}
             alt="viaplay-series"
-          />
+          /></div>
         </>
       );
     });
-    return <div id="viaplay-image">{seriesList}</div>;
+    return (
+      <>
+        <ViaplayHeader />
+
+        <div id="viaplay-image">{seriesList}</div>
+
+        <ViaplayFooter />
+      </>
+    );
   }
 }
 

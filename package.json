@@ -23,7 +23,6 @@
     "eject": "react-scripts eject",
     "start:silent": "BROWSER=none PORT=3001 react-scripts start",
     "cy:open": "cypress open & yarn start --silent"
-
   },
   "eslintConfig": {
     "extends": "react-app"
