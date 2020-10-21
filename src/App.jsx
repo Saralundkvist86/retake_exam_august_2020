@@ -17,20 +17,19 @@ class App extends Component {
     let seriesList = this.state.series.map((serie) => {
       return (
         <>
-        <div id="image">
-          <img 
-            src={`${serie.content.images.landscape.url}`}
-            alt="viaplay-series"
-          /></div>
+          <div id="viaplay-image">
+            <img
+              src={serie.content.images.landscape.url}
+              alt="viaplay-series"
+            />
+          </div>
         </>
       );
     });
     return (
       <>
         <ViaplayHeader />
-
-        <div id="viaplay-image">{seriesList}</div>
-
+        <div data-cy="series-list">{seriesList}</div>
         <ViaplayFooter />
       </>
     );
